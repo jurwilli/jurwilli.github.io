@@ -435,4 +435,85 @@ $(window).load(function() {
     }, 250);
   }, 2000);
   
-})
+});
+
+$(window).resize(function() {
+    if(this.resizeTO) clearTimeout(this.resizeTO);
+    this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+    }, 500);
+});
+/*Window Resize*/
+$(window).bind('resizeEnd', function() {
+    //do something, window hasn't changed size in 500ms
+
+    $('i').show();
+
+  var twitterPos = $('#twitter').position();
+  var githubPos = $('#github').position();
+  var stackPos = $('#stack').position();
+  var linkedinPos = $('#linkedin').position();
+  var codePos = $('#code').position();
+  var plusPos = $('#plus').position();
+  var mailPos = $('#mail').position();
+  var imgPosNew = $('.me').position();
+  
+  $('i').css({
+    position: 'absolute',
+    zIndex: '1',
+    top: imgPosNew.top + 100,
+    left: '47%'
+  });
+  
+  setTimeout(function() {
+    $('#twitter').animate({
+      top: twitterPos.top + 10,
+      left: twitterPos.left - 10
+    }, 500);
+  }, 250);
+  
+  setTimeout(function() {
+    $('#twitter').animate({
+      top: twitterPos.top,
+      left: twitterPos.left
+    }, 250);
+    
+    $('#github').animate({
+      top: githubPos.top + 10,
+      left: githubPos.left - 6
+    }, 500);
+  }, 500);
+  
+  setTimeout(function() {
+    $('#github').animate({
+      top: githubPos.top,
+      left: githubPos.left
+    }, 250);
+
+    
+    $('#linkedin').animate({
+      top: linkedinPos.top + 10,
+      left: linkedinPos.left
+    }, 500);
+  }, 1000);
+  
+  setTimeout(function() {
+    $('#linkedin').animate({
+      top: linkedinPos.top,
+      left: linkedinPos.left
+    }, 250);
+    
+    $('#mail').animate({
+      top: mailPos.top + 10,
+      left: mailPos.left + 10
+    }, 500);
+  }, 1750);
+  
+  setTimeout(function() {
+    $('#mail').animate({
+      top: mailPos.top,
+      left: mailPos.left
+    }, 250);
+  }, 2000);
+  
+});
