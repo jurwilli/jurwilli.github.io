@@ -342,7 +342,7 @@ scroller.init();
 
 }(window.jQuery);
 
-
+$(window).bind("load", function() {
 $(function(){
 
 		$("#typed").typed({
@@ -358,6 +358,7 @@ $(function(){
 		function foo(){ console.log("Callback"); }
 
 	});
+});
 
 
 /*About Me Card Social Icons*/
@@ -376,6 +377,8 @@ $(window).load(function() {
   var plusPos = $('#plus').position();
   var mailPos = $('#mail').position();
   var imgPos = $('.me').position();
+  var winWidth = $(window).width();
+
   
   $('i').css({
     position: 'absolute',
@@ -446,8 +449,8 @@ $(window).resize(function() {
 /*Window Resize*/
 $(window).bind('resizeEnd', function() {
     //do something, window hasn't changed size in 500ms
-
-    $('i').show();
+  $('i').hide();
+  $('i').show();
 
   var twitterPos = $('#twitter').position();
   var githubPos = $('#github').position();
@@ -457,7 +460,18 @@ $(window).bind('resizeEnd', function() {
   var plusPos = $('#plus').position();
   var mailPos = $('#mail').position();
   var imgPosNew = $('.me').position();
-  
+  var winWidth = $(document).width();
+
+  console.log(imgPosNew);
+  console.log(winWidth);
+
+
+  if (winWidth <= 525){
+  	$('i').css({
+  		top: imgPosNew.top + 300,
+  		left: '30%'
+  	});
+  };
   $('i').css({
     position: 'absolute',
     zIndex: '1',
@@ -515,5 +529,4 @@ $(window).bind('resizeEnd', function() {
       left: mailPos.left
     }, 250);
   }, 2000);
-  
-});
+})

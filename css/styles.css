@@ -146,10 +146,10 @@ main .overlay {
   background-repeat: repeat-x;
   background-size: auto auto;
   background-position: 0 16px;
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
   -webkit-transform: rotate(-2deg);
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
 }
 #divider:before {
   z-index: 1;
@@ -160,10 +160,10 @@ main .overlay {
   width: 150%;
   height: 314px;
   background: url(../img/foreground.png);
-  -moz-transform: rotate(-5deg);
-  -ms-transform: rotate(-5deg);
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
   -webkit-transform: rotate(-2deg);
-  transform: rotate(-5deg);
+  transform: rotate(-2deg);
 }
 
 #content {
@@ -207,7 +207,7 @@ main .overlay {
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  left: 10em;
+  left: 9em;
   top: 2em;
 }
 .profile-card h1 {
@@ -239,7 +239,7 @@ main .overlay {
   height: 100%;
 }
 .social i {
-  margin: .3em;
+  margin: .35em;
   cursor: pointer;
   transition: color 300ms ease, margin-top 300ms ease;
   transform: translateZ(0);
@@ -271,7 +271,7 @@ main .overlay {
     min-height: 750px;
   }
   #content{
-  min-height: 0;
+
   height: 25em;
   }
   #divider {
