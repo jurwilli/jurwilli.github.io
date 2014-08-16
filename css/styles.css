@@ -271,8 +271,7 @@ main .overlay {
     min-height: 750px;
   }
   #content{
-
-  height: 25em;
+  min-height: 0;
   }
   #divider {
   top: -400px;
@@ -297,10 +296,16 @@ main .overlay {
 
 @media screen and (max-width: 450px){
   .profile-card img {
-    margin: 5em -3.8em;
+    margin: 25% -6%;
   }
+
+@media screen and (max-width: 375px){
+  .profile-card img{
+    margin: 25% -18%;
+  }
+}
 
 @media screen and (max-width: 358px){
   .profile-card img {
-    margin: 5em -5.8em;
+    margin: 33% -24%;
 }
