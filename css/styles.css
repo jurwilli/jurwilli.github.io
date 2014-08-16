@@ -266,7 +266,7 @@ main .overlay {
 @media screen and (max-width: 525px){
   .profile-card{
     width: 100%;
-    top: -3em;
+    top: 0;
     padding-top: 6em;
     min-height: 750px;
   }
