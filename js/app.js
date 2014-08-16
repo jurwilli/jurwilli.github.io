@@ -124,6 +124,10 @@ scroller.init();
 
 	/*Typing*/
 
+$typed.css({
+  'margin-top': .98*(.5*wHeight)
+});
+
 !function($){
 
 	"use strict";
